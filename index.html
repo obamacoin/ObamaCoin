@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="styles.css"> <!-- You can link to an external CSS file for styling -->
+    <style>
+        /* Body background color */
+        body {
+            background-color: #000; /* Black background color */
+            color: #fff; /* Text color for the entire page */
+            margin: 0; /* Remove default margin */
+        }
+
+        /* Inline CSS for section backgrounds */
+        .section1 {
+            background-color: #000; /* Black background for the first section */
+        }
+        .section2 {
+            background-color: #000; /* Black background for the second section */
+        }
+        .section3 {
+            background-color: #000; /* Bluish background */
+        }
+
+        /* Remove default margin and padding */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Style for header and footer */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #000; /* Dark background color for header */
+            color: #fff; /* Text color for header */
+            padding: 10px 20px; /* Add padding to header */
+        }
+
+        /* Style for main content */
+        main {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Style for sections */
+        section {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            margin: 0;
+        }
+
+        /* Style for section content */
+        .section-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: left; /* Align text to the left in Section 1 */
+            background-color: #000;
+        }
+
+        /* Style for text in the first section */
+        .section1 .section-content h2 {
+            /* font-size: 78px; /* Font size for the big text */
+            /* margin-top: -120px; /* Adjust the margin */
+            /* margin-left: 10%; */
+        }
+
+        .section1 .section-content p {
+            /* font-size: 20px; /* Font size for the small text (reduced by 6) */
+            margin-top: 80px; /* Adjust the margin */
+            color: #888; /* Gray text color for small text */
+            /* margin-left: 10%; /* Adjusted margin to align with header text */
+        }
+
+        /* Style for the big text in the first section */
+        .big-text {
+            /* margin-top: 100px; /* Move the big text up by 60 pixels */
+        }
+
+        /* Style for image container in the first section */
+        .section1 .image-container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: -40px; /* Move the big text up by 60 pixels */
+        }
+        .section1 .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Style for gradient text */
+        .gradient-text {
+            background: linear-gradient(45deg, #5E75C9, #B46D7D, #DC6631);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        /* Responsive image */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Style for the trade button */
+        .trade-button {
+            background-color: #5E75C9; /* Blue background color */
+            color: #fff; /* Text color for the button */
+            padding: 10px 20px; /* Add padding to the button */
+            font-weight: bold; /* Make text bold */
+            border: none; /* Remove button border */
+            border-radius: 5px; /* Add border-radius for rounded corners */
+            cursor: pointer; /* Add cursor pointer on hover */
+            margin-right: 20px; /* Add margin to the right */
+        }
+
+        /* Style for Section 2 */
+        .section2 {
+            background-color: #000; /* Set the background color to black */
+        }
+    
+        /* Style for left and right halves in Section 2 */
+        .section2 .section-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            align-items: flex-start;
+        }
+
+        /* Style for the left half */
+        .section2 .left-half {
+            align-items: center;
+        }
+
+        /* Style for the image in the left half */
+        .section2 .left-half .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+
+        /* Style for the right half */
+        .section2 .right-half {
+            background-color: #000; /* White background for the right half */
+            transform: translate(0%, 0%);
+            display: flex; /* Add flex display */
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: flex-start; /* Align elements to the top */
+            align-items: flex-start; /* Align items to the left */
+            text-align: left; /* Left-align text */
+            padding-left: 20px; /* Add padding to the left */
+        }
+        
+        /* Style for the h2 element in the right half */
+        .section2 .right-half h2 {
+            /* font-size: 110px; /* Adjust the font size as needed */
+            margin-bottom: 10px; /* Add margin to separate text from the top */
+            margin-top: 0; /* Remove the top margin */
+            align-self: flex-start; /* Align the title text to the top of its section */
+        }
+        
+        /* Style for the p element in the right half */
+        .section2 .right-half p {
+            /* font-size: 30px; /* Adjust the font size as needed */
+            color: #888; /* Gray text color for small text */
+            text-align: left; /* Left-align text */
+            margin-top: 20px; /* Add margin at the top */
+        }
+        
+        /* Style for the bullet points */
+        .section2 .right-half ul {
+            text-align: left; /* Left-align the bullet points */
+            padding-left: 0; /* Remove left padding from the list */
+            list-style-position: outside; /* Place bullet points outside the list */
+        }
+      
+              /* Style for the left half (roadmap text) in Section 3 */
+        .section3 .section-content {
+            /* font-size: 24px; /* Increase font size by 6 units (from 30px to 36px) */
+            align-items: flex-start;
+            color: #888; /* Gray text color for small text */
+        }
+
+    /* Set a base font size */
+    .section-content {
+        font-size: 2vw; /* 1% of viewport width */
+    }
+      
+    /* Adjust font sizes for headings and paragraphs using 'em' units */
+    h2, p {
+        font-size: 2vw; /* Adjust as needed */
+    }
+      
+    /* Adjust font sizes for headings and paragraphs using 'em' units */
+    h1 {
+        font-size: 3vw; /* Adjust as needed */
+    }
+     
+
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="images\obamacoin.png" style="max-width: 6vw; height: auto; float: left; margin-right: 20px;">
+            <h1 style="text-align: left;">Obama Coin</h1>
+        </div>
+        <a href="#" class="trade-button" style="font-size: inherit; font-weight: inherit; text-decoration: none; display: inline-block;">Trade $OBAM</a>
+    </header>
+
+    <main>
+        <!-- Section 1 -->
+        <section class="section1">
+            <div class="section-content">
+                <h2 class="big-text">Pioneering Global Crypto <span class="gradient-text">Adoption</span></h2>
+                <p>We envision a future where cryptocurrency is universally accepted and seamlessly integrated into our daily lives. We are committed to promoting pro-crypto regulations, enabling unbiased crypto news, and making crypto education accessible for everyone.</p>
+                <p>CA: 0xf2d754eaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
+            </div>
+            <div class="image-container">
+                <img src="https://joinbencoin.com/assets/img/homepage/world.svg" alt="Image Description">
+            </div>
+        </section>
+
+        <!-- Section 2 -->
+        <section class="section2">
+            <div class="section-content left-half">
+                <div class="image-container">
+                    <img src="images/obam.png">
+                </div>
+            </div>
+            <div class="section2 section-content right-half">
+                <h2 style="text-align: center;"><b>Tokenomics</b></h2>
+                <p style="text-align: left;">
+                    • Ticker: OBAM <br><br>
+                    • Name: OBAMA COIN <br><br>
+                    • Total supply: 420,690,000,000,000 OBAM <br><br>
+                    • Network: Ethereum Smart Chain (ERC-20) <br><br>
+                    • Tax: 2% Buy (1% Development / 1% Marketing) <br><br>
+                    • Ca: 0xf2d754eaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+                </p>
+            </div>
+        </section>
+        
+        <!-- Section 3 -->
+        <section class="section3">
+            <div class="section-content">
+                <h2 style="color: #FFF;">Roadmap:</h2><br>
+                <p>
+                    Q4-2023
+                    <ul>
+                        <li>Website development.</li>
+                        <li>Social media building.</li>
+                        <li>Community building.</li>
+                        <li>Team hiring.</li>
+                        <li>Whitepaper design.</li>
+                        <li>Listing on CoinMarketCapital.</li>
+                        <li>Private sale.</li>
+                    </ul>
+                </p>
+                <p>
+                    Q1-2024
+                    <ul>
+                        <li>Airdrop.</li>
+                        <li>Marketing.</li>
+                        <li>Presale.</li>
+                        <li>Listing on PancakeSwap.</li>
+                        <li>Liquidity lock.</li>
+                    </ul>
+                </p>
+                <p>
+                    Q2-2024
+                    <ul>
+                        <li>Burn 20% token.</li>
+                        <li>Listing on CEX (Centralized Exchange).</li>
+                        <li>Events.</li>
+                        <li>Collect feedback from the community.</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="section-content right-half">
+                <div class="image-container">
+                    <img src="images/ObamaRoadmap.png" alt="Contact Image">
+                </div>
+            </div>
+        </section>
+
+
+        </section>
+    </main>
+
+    <footer>
+      <div style="text-align: center;">
+        <p>&copy; 2023 OBAMA COIN. ALL RIGHTS RESERVED.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- You can link to an external JavaScript file for interactivity -->
+</body>
+</html>
